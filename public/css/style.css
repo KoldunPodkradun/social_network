@@ -1,0 +1,15 @@
+*{
+    font-family: sans-serif;
+}
+
+.btn_close{
+    display: inline-block;
+    font-size: 15px;
+    padding: 2px;
+    margin-left: 20px;
+    border: 1px solid #dddada;
+    border-radius: 5px;
+    vertical-align: middle;
+    color: #b82e24;
+    cursor: pointer;
+}
