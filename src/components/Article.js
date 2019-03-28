@@ -1,15 +1,15 @@
 import React, {Component} from 'react'
 
 class Article extends Component {
-    constructor(props){
-
+    state = {
+        isOpen: false
     }
 
     render() {
         const {articles} = this.props;
-        const btn_close = <div className={'btn_close'} onClick={closeArticle}>Close</div>;
+        const btn_close = <div className={'btn_close'} onClick={this.closeArticle}>{this.state.isOpen ? 'close' : 'open'}</div>;
         const title = <h1>{articles.title}{btn_close}</h1>;
-        const txt = <p>{articles.txt}</p>;
+        const txt = this.state.isOpen && <p>{articles.txt}</p>;
         return (
             <div>
                 {title}
@@ -17,10 +17,12 @@ class Article extends Component {
             </div>
         )
     }
-}
 
-function closeArticle() {
-    console.log('click');
+    closeArticle = () => {
+        this.setState({
+            isOpen: !this.state.isOpen
+        })
+    }
 }
 
 export default Article
