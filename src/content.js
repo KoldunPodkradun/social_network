@@ -1,8 +1,44 @@
 export default [
     {
         "id": "1",
-        "title": "Sekiro: Shadows Die Twice",
-        "txt": "Одно из самых популярных мнений про Sekiro: Shadows Die Twice — что игра совсем не похожа на Dark Souls и Bloodborne. Предположим, что так и есть, но это точно игра FromSoftware — я четко слышу это по треску задниц, который стоит в Сети последние несколько дней.",
+        "title": "Test 1",
+        "txt": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        "comments": [
+            {
+                "id": "user_1",
+                "user": "user_name_1",
+                "text": "user_comment"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "title": "Test 2﻿",
+        "txt": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        "comments": [
+            {
+                "id": "user_1",
+                "user": "user_name_1",
+                "text": "user_comment"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "title": "Test 3",
+        "txt": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        "comments": [
+            {
+                "id": "user_1",
+                "user": "user_name_1",
+                "text": "user_comment"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "title": "Test 4",
+        "txt": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
         "comments": [
             {
                 "id": "user_1",
