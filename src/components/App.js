@@ -1,15 +1,17 @@
 import React, {Component} from 'react'
-import Test from '../components/test'
+import Header from './Header'
+import Sidebar from './Sidebar'
+import Content from './Content'
 import 'bootstrap/dist/css/bootstrap.css'
 
 class App extends Component {
 
     render() {
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-12"><Test/></div>
-                </div>
+            <div className="wrapper">
+                <Header/>
+                <Sidebar/>
+                <Content/>
             </div>
         )
     }
