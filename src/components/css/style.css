@@ -2,7 +2,11 @@
     font-family: sans-serif;
 }
 
-.btn_close{
+li{
+    list-style: none;
+}
+
+.btn{
     display: inline-block;
     font-size: 15px;
     padding: 2px;

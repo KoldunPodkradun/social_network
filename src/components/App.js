@@ -1,14 +1,18 @@
-import React from 'react'
-import Article_List from './Article_List'
-import articles from '../content'
+import React, {Component} from 'react'
+import Test from '../components/test'
 import 'bootstrap/dist/css/bootstrap.css'
-function App(){
 
-    return(
-        <div className="container">
-            <Article_List articles = {articles}/>
-        </div>
-    )
+class App extends Component {
+
+    render() {
+        return (
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-12"><Test/></div>
+                </div>
+            </div>
+        )
+    }
 }
 
 export default App
