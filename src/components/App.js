@@ -1,8 +1,7 @@
 import React, {Component} from 'react'
 import Header from './Header'
 import Sidebar from './Sidebar'
-import Content from './Content'
-import 'bootstrap/dist/css/bootstrap.css'
+import Profile from './Profile'
 
 class App extends Component {
 
@@ -11,7 +10,7 @@ class App extends Component {
             <div className="wrapper">
                 <Header/>
                 <Sidebar/>
-                <Content/>
+                <Profile/>
             </div>
         )
     }
