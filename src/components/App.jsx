@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import Header from './Header/Header'
 import Sidebar from './Sidebar/Sidebar'
 import Profile from './Profile/Profile'
+import Dialogs from './Dialogs/Dialogs'
 
 class App extends Component {
 
@@ -11,6 +12,7 @@ class App extends Component {
                 <Header/>
                 <Sidebar/>
                 <Profile/>
+                <Dialogs/>
             </div>
         )
     }

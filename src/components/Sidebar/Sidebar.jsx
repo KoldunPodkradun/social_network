@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import Classes from './Sidebar.module.css'
 
 class Sidebar extends Component {
-
     render() {
         return (
             <nav className={Classes.sidebar}>
