@@ -4,25 +4,22 @@
     padding: 0;
 }
 
-ul{
-    text-decoration: none;
-}
-
 li {
     list-style: none;
 }
 
 a {
+    text-decoration: none;
     color: #000000;
 }
 
 .wrapper {
     display: grid;
     grid-template-areas: "header header" "sidebar content";
-    grid-auto-rows: 1fr 5fr;
+    grid-auto-rows: 1fr 7fr;
     grid-template-columns: 2fr 10fr;
-    grid-gap: 5px;
-    padding: 5px;
+    grid-gap: 10px;
+    padding: 10px;
     color: #ffffff;
 }
 

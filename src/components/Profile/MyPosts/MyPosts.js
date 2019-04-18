@@ -4,13 +4,14 @@ import Post from './Post/Post'
 
 class MyPosts extends Component {
     render() {
-        return(
+        return (
             <div className={Classes.my_posts}>
                 <div className={Classes.add}>
                     <textarea></textarea>
                     <div className={Classes.btn}>Add</div>
                 </div>
-                <Post/>
+                <Post message='First message' />
+                <Post message='Second message' />
             </div>
         )
     }

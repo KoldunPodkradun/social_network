@@ -3,7 +3,7 @@
     grid-area: content;
     grid-template-areas: "content_bg" "personal_data" "my_posts";
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr 3fr 3fr;
+    grid-template-rows: 2fr 3fr 3fr;
     grid-gap: 10px;
     border: 1.5px solid #000;
     padding: 15px;
