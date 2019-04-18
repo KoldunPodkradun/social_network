@@ -5,7 +5,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 3fr 3fr 3fr;
     grid-gap: 10px;
-    border: 2px solid #000;
+    border: 1.5px solid #000;
     padding: 15px;
 }
 
@@ -20,9 +20,4 @@
 .personal_data{
     grid-area: personal_data;
     background-color: #61e3a3;
-}
-
-.my_posts{
-    grid-area: my_posts;
-    background-color: #bd7ee3;
 }

@@ -1,0 +1,25 @@
+.my_posts{
+    border: 1.5px solid #000;
+    padding: 25px;
+}
+
+.add{
+    display: grid;
+    grid-template-columns: 10fr 2fr;
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+textarea{
+    border: 1.5px solid #000000;
+    resize: none;
+}
+
+.btn{
+    border: 1.5px solid #000000;
+    background-color: #eee;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+}

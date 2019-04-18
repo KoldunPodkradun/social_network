@@ -1,5 +1,3 @@
-
-
 * {
     font-family: sans-serif;
     margin: 0;
@@ -24,9 +22,16 @@ a {
     grid-auto-rows: 1fr 5fr;
     grid-template-columns: 2fr 10fr;
     grid-gap: 5px;
+    padding: 5px;
     color: #ffffff;
 }
 
-@import "../components/Header.css";
-@import "../components/Navbar.css";
-@import "../components/Profile.css";
+
+/*несколько классов в React*/
+
+/*css*/
+/*.class.class_2{};*/
+
+/*jsx*/
+/*ковычки тильдой*/
+/*{`${class} ${class_2};`}*/

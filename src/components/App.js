@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import Header from './Header'
-import Sidebar from './Sidebar'
-import Profile from './Profile'
+import Header from './Header/Header'
+import Sidebar from './Sidebar/Sidebar'
+import Profile from './Profile/Profile'
 
 class App extends Component {
 
