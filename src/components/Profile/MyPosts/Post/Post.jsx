@@ -1,5 +1,5 @@
-import React, {Component} from 'react'
-import Classes from './Post.module.css'
+import React, {Component} from 'react';
+import Classes from './Post.module.css';
 
 class Post extends Component {
     render() {

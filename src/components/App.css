@@ -16,13 +16,19 @@ a {
 .wrapper {
     display: grid;
     grid-template-areas: "header header" "sidebar content";
-    grid-auto-rows: 1fr 7fr;
+    grid-auto-rows: 2fr 8fr;
     grid-template-columns: 2fr 10fr;
     grid-gap: 10px;
     padding: 10px;
     color: #ffffff;
+    height: calc(100vh - 20px);
 }
 
+
+.content{
+    border: 1.5px solid #000;
+    padding: 15px;
+}
 
 /*несколько классов в React*/
 
