@@ -1,21 +1,7 @@
 .content {
     display: grid;
-    grid-area: content;
-    grid-template-areas: "content_bg" "personal_data" "my_posts";
+    grid-template-areas: "profile_info" "my_posts";
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr 3fr 3fr;
+    grid-template-rows: 2fr 2fr;
     grid-gap: 10px;
-}
-
-.content_bg{
-    max-width: 450px;
-    grid-area: content_bg;
-    background-color: #80e368;
-    align-self: center;
-    justify-self: center;
-}
-
-.personal_data{
-    grid-area: personal_data;
-    background-color: #61e3a3;
 }

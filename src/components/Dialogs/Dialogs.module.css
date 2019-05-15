@@ -1,20 +1,16 @@
 .dialogs{
     display: grid;
     grid-auto-rows: 100%;
-    grid-template-columns: 2fr 10fr;
+    grid-template-columns: 2fr 8fr;
     grid-gap: 10px;
+}
+
+.dialog{
+    border: 1.5px solid #000;
+    padding: 15px;
 }
 
 .messages{
     border: 1.5px solid #000;
     padding: 15px;
-}
-
-.message{
-    width: max-content;
-    border: 1.5px solid #000;
-    padding: 15px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    color: #000000;
 }
