@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d42c8451-9032-4376-a9e7-47938c2f86b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogItem/DialogItem.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Dialogs/Message/Message.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Dialogs/Message/Message.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Dialog.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogItem/DialogItem.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Dialog.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,9 +25,10 @@
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.22" value="3" />
           <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.40" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -48,7 +38,7 @@
           <entry key="html" value="1" />
           <entry key="js" value="39" />
           <entry key="json" value="3" />
-          <entry key="jsx" value="41" />
+          <entry key="jsx" value="43" />
           <entry key="rnc" value="1" />
           <entry key="ts" value="5" />
         </counts>
@@ -58,7 +48,7 @@
           <entry key="CSS" value="50" />
           <entry key="HTML" value="1" />
           <entry key="JSON" value="3" />
-          <entry key="JSX Harmony" value="41" />
+          <entry key="JSX Harmony" value="43" />
           <entry key="JavaScript" value="40" />
           <entry key="RNG Compact" value="1" />
           <entry key="TypeScript" value="5" />
@@ -69,7 +59,7 @@
           <entry key="css" value="1500" />
           <entry key="html" value="12" />
           <entry key="js" value="3392" />
-          <entry key="jsx" value="1907" />
+          <entry key="jsx" value="2094" />
           <entry key="txt" value="36" />
         </counts>
       </usages-collector>
@@ -77,14 +67,14 @@
         <counts>
           <entry key="CSS" value="1500" />
           <entry key="HTML" value="12" />
-          <entry key="JSX Harmony" value="1907" />
+          <entry key="JSX Harmony" value="2094" />
           <entry key="JavaScript" value="3392" />
           <entry key="PLAIN_TEXT" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="ESLintLanguageService" value="9" />
+          <entry key="ESLintLanguageService" value="10" />
           <entry key="TypeScriptServerServiceImpl" value="1" />
         </counts>
       </usages-collector>
@@ -92,20 +82,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-                <marker date="1557927591189" expanded="true" signature="236:293" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Dialogs/DialogItem/DialogItem.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -117,11 +94,47 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Dialogs/Message/Message.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
+              <caret column="38" selection-start-column="38" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="72" lean-forward="true" selection-start-line="13" selection-start-column="72" selection-end-line="13" selection-end-column="72" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/App.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="62" lean-forward="true" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -180,10 +193,8 @@
         <option value="$PROJECT_DIR$/src/components/News/News.jsx" />
         <option value="$PROJECT_DIR$/src/components/Sidebar/Sidebar.module.css" />
         <option value="$PROJECT_DIR$/src/components/App.css" />
-        <option value="$PROJECT_DIR$/src/components/App.jsx" />
         <option value="$PROJECT_DIR$/src/components/Dialogs/Dialog/Dialog.js" />
         <option value="$PROJECT_DIR$/src/components/Dialogs/Dialog/Dialog.css" />
-        <option value="$PROJECT_DIR$/src/index.jsx" />
         <option value="$PROJECT_DIR$/src/components/Header/Header.jsx" />
         <option value="$PROJECT_DIR$/src/components/Dialogs/Message/Message.module.css" />
         <option value="$PROJECT_DIR$/src/components/Dialogs/Dialog/Dialog.module.css" />
@@ -198,9 +209,11 @@
         <option value="$PROJECT_DIR$/src/components/Dialogs/Dialogs.module.css" />
         <option value="$PROJECT_DIR$/src/components/Dialogs/Message/Message.jsx" />
         <option value="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.jsx" />
-        <option value="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" />
         <option value="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" />
         <option value="$PROJECT_DIR$/src/components/Dialogs/DialogItem/DialogItem.jsx" />
+        <option value="$PROJECT_DIR$/src/index.jsx" />
+        <option value="$PROJECT_DIR$/src/components/App.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" />
       </list>
     </option>
   </component>
@@ -253,29 +266,6 @@
               <item name="react_work_space" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react_work_space" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react_work_space" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Dialogs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react_work_space" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react_work_space" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Dialogs" type="462c0819:PsiDirectoryNode" />
-              <item name="DialogItem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react_work_space" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react_work_space" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Dialogs" type="462c0819:PsiDirectoryNode" />
-              <item name="Message" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -352,7 +342,8 @@
       <workItem from="1557733508429" duration="3359000" />
       <workItem from="1557825840917" duration="9073000" />
       <workItem from="1557902919878" duration="2000" />
-      <workItem from="1557902972962" duration="20420000" />
+      <workItem from="1557902972962" duration="21637000" />
+      <workItem from="1558092665234" duration="2450000" />
     </task>
     <task id="LOCAL-00001" summary="28.03.2019 16.25">
       <created>1553779395638</created>
@@ -417,21 +408,27 @@
       <option name="project" value="LOCAL" />
       <updated>1557907222837</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="15.05.2019">
+      <created>1557931145268</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1557931145268</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87110000" />
+    <option name="totallyTimeSpent" value="90777000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18657719" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18926175" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.33049646" />
@@ -443,7 +440,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32907802" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24966443" />
@@ -553,9 +551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -566,30 +561,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Dialogs/Dialog/Dialog">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" selection-start-column="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Dialogs/Dialog/Dialog" />
     <entry file="file://$PROJECT_DIR$/src/components/Header/Header.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/App.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="38" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -617,9 +593,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="53" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -644,9 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -654,9 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="60" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -671,20 +638,43 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/App.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="62" lean-forward="true" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="221">
+          <caret line="13" column="72" lean-forward="true" selection-start-line="13" selection-start-column="72" selection-end-line="13" selection-end-column="72" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
-            <marker date="1557927591189" expanded="true" signature="236:293" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Dialogs/Message/Message.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="38" selection-start-column="38" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -695,13 +685,6 @@
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Dialogs/Message/Message.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
         </state>
       </provider>
     </entry>
