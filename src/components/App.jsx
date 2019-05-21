@@ -16,7 +16,8 @@ class App extends Component {
                     <Header/>
                     <Sidebar/>
                     <div className="content">
-                        <Route path="/dialogs" render={() => {return (<Dialogs dialogData={this.props.dialogData} messageData={this.props.messageData}/>)}}/>
+                        {/*<Route path="/dialogs" render={() => {return (<Dialogs dialogData={this.props.dialogData} messageData={this.props.messageData}/>)}}/>*/}
+                        <Route path="/dialogs" component={Dialogs}/>
                         <Route path="/profile" component={Profile}/>
                         <Route path="/news" component={News}/>
                     </div>
