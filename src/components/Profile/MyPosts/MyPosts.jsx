@@ -24,7 +24,7 @@ class MyPosts extends Component {
             }
         ];
 
-        let postElement = posts.map((post) => <Post text={post.text} likes={post.likes}/>);
+        // let postElement = posts.map((post) => <Post text={post.text} likes={post.likes}/>);
 
         return (
             <div className={Classes.my_posts}>
@@ -32,7 +32,8 @@ class MyPosts extends Component {
                     <textarea></textarea>
                     <div className={Classes.btn}>Add</div>
                 </div>
-                {postElement}
+                {/*{postElement}*/}
+                <Post text={posts.text} likes={posts.likes}/>
             </div>
         )
     }

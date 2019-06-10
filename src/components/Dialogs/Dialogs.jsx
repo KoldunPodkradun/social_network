@@ -5,7 +5,7 @@ import Classes from './Dialogs.module.css'
 
 class Dialogs extends Component {
     render() {
-        let dialogData = [
+        let dialogs = [
             {
                 id: 1,
                 userName: 'userName 1'
@@ -16,7 +16,7 @@ class Dialogs extends Component {
             }
         ];
 
-        let messageData = [
+        let messages = [
             {
                 text: 'text 1 text 1 text 1',
                 likes: '1'
@@ -27,9 +27,9 @@ class Dialogs extends Component {
             }
         ];
 
-        let dialogElement = dialogData.map((dialog) => <DialogItem id={dialog.id} name={dialog.userName}/>);
-
-        let messageElement = messageData.map((message) => <Message text={message.text} likes={message.likes}/>);
+        let dialogElement = dialogs.map((dialog) => <DialogItem id={dialog.id} name={dialog.userName}/>);
+        //
+        // let messageElement = messages.map((message) => <Message text={message.text} likes={message.likes}/>);
 
         return (
             <div className={Classes.dialogs}>
@@ -37,7 +37,8 @@ class Dialogs extends Component {
                     {dialogElement}
                 </div>
                 <div className={Classes.messages}>
-                    {messageElement}
+                    {/*{messageElement}*/}
+                    <Message text={messages[1].text} likes={messages[1].likes}/>
                 </div>
             </div>
         )

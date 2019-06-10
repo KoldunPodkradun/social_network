@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom"
 class DialogItem extends Component {
     render() {
         return (
-            <NavLink to={"/dialog/" + this.props.id} className={Classes.item} activeClassName={Classes.active}>{this.props.userName}</NavLink>
+            <NavLink to={"/dialog/" + this.props.id} className={Classes.item} activeClassName={Classes.active}>{this.props.name}</NavLink>
         )
     }
 }
