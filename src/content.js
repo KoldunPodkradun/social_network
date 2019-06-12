@@ -46,17 +46,5 @@ export default [
                 "text": "user_comment"
             }
         ]
-    },
-    {
-        "id": "5",
-        "title": "Header 5",
-        "txt": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-        "comments": [
-            {
-                "id": "user_1",
-                "user": "user_name_1",
-                "text": "user_comment"
-            }
-        ]
     }
 ]

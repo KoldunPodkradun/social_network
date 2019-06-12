@@ -13,6 +13,7 @@
 textarea{
     border: 1.5px solid #000000;
     resize: none;
+    padding: 10px;
 }
 
 .btn{
