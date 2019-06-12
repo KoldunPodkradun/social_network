@@ -6,8 +6,8 @@ import Classes from './Dialogs.module.css'
 class Dialogs extends Component {
     render() {
 
-        let dialogElement = this.props.dialogs.map((dialog) => <DialogItem id={dialog.id} name={dialog.userName}/>);
-        let messageElement = this.props.messages.map((message) => <Message text={message.text} likes={message.likes}/>);
+        let dialogElement = this.props.state.dialogs.map((dialog) => <DialogItem id={dialog.id} name={dialog.userName}/>);
+        let messageElement = this.props.state.messages.map((message) => <Message text={message.text} likes={message.likes}/>);
 
         return (
             <div className={Classes.dialogs}>

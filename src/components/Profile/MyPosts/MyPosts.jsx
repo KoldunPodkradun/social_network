@@ -10,8 +10,9 @@ class MyPosts extends Component {
         let newPostElement = React.createRef();
 
         let addPost = () => {
+            debugger;
             let text = newPostElement.current.value;
-            alert(text)
+            this.props.addPost(text);
         };
 
         return (

@@ -49,11 +49,10 @@ let state = {
 
 export let addPost = (postMessage) => {
     let newPost = {
-        id: 1,
         text: postMessage,
         likes: 0
     };
-    state.posts.push(newPost);
+    state.profileData.posts.push(newPost);
 };
 
 export default state;

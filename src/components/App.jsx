@@ -17,14 +17,18 @@ class App extends Component {
                     <div className="content">
                         <Route path="/dialogs"
                                render={() => {
-                                   return (<Dialogs
-                                       dialogs={this.props.state.dialogsData.dialogs}
-                                       messages={this.props.state.dialogsData.messages}/>)
+                                   return (
+                                       <Dialogs
+                                       state={this.props.state.dialogsData}/>
+                                   )
                                }}/>
                         <Route path="/profile"
                                render={() => {
-                                   return (<Profile
-                                       posts={this.props.state.profileData.posts}/>)
+                                   return (
+                                       <Profile
+                                       state={this.props.state.profileData}
+                                       addPost={this.props.addPost}/>
+                                   )
                                }}/>
                         <Route path="/news" component={News}/>
                     </div>
