@@ -10,7 +10,7 @@ class MyPosts extends Component {
             <div className={Classes.my_posts}>
                 <div className={Classes.add}>
                     <textarea></textarea>
-                    <div className={Classes.btn}>Add</div>
+                    <div className={Classes.btn} onClick={() => {alert('Hay')}}>Add</div>
                 </div>
                 {postElement}
             </div>
