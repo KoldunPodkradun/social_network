@@ -28,6 +28,10 @@ let dialogs = [
     {
         id: 2,
         userName: 'userName 2'
+    },
+    {
+        id: 3,
+        userName: 'userName 3'
     }
 ];
 
