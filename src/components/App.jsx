@@ -9,7 +9,6 @@ import {BrowserRouter, Route} from "react-router-dom";
 
 class App extends Component {
     render() {
-        console.log(this.props.messages)
         return (
             <div className="wrapper">
                 <BrowserRouter>
@@ -17,7 +16,7 @@ class App extends Component {
                     <Sidebar/>
                     <div className="content">
                         <Route path="/dialogs" render={() => {return (<Dialogs dialogs={this.props.dialogs} messages={this.props.messages}/>)}}/>
-                        <Route path="/profile" component={Profile}/>
+                        <Route path="/profile" render={() => {return (<Profile posts={this.props.posts}/>)}}/>
                         <Route path="/news" component={News}/>
                     </div>
                 </BrowserRouter>

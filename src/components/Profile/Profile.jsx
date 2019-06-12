@@ -4,12 +4,11 @@ import MyPosts from './MyPosts/MyPosts';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 class Profile extends Component{
-
     render(){
         return(
             <div className={Classes.content}>
                 <ProfileInfo/>
-                <MyPosts/>
+                <MyPosts posts={this.props.posts}/>
             </div>
         )
     }
