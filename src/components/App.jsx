@@ -15,8 +15,17 @@ class App extends Component {
                     <Header/>
                     <Sidebar/>
                     <div className="content">
-                        <Route path="/dialogs" render={() => {return (<Dialogs dialogs={this.props.dialogs} messages={this.props.messages}/>)}}/>
-                        <Route path="/profile" render={() => {return (<Profile posts={this.props.posts}/>)}}/>
+                        <Route path="/dialogs"
+                               render={() => {
+                                   return (<Dialogs
+                                       dialogs={this.props.state.dialogsData.dialogs}
+                                       messages={this.props.state.dialogsData.messages}/>)
+                               }}/>
+                        <Route path="/profile"
+                               render={() => {
+                                   return (<Profile
+                                       posts={this.props.state.profileData.posts}/>)
+                               }}/>
                         <Route path="/news" component={News}/>
                     </div>
                 </BrowserRouter>
