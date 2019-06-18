@@ -8,7 +8,12 @@ class Profile extends Component{
         return(
             <div className={Classes.content}>
                 <ProfileInfo/>
-                <MyPosts posts={this.props.posts}/>
+                <MyPosts
+                    posts={this.props.profileData.posts}
+                    newPostText={this.props.profileData.newPostText}
+                    updateNewPostText={this.props.updateNewPostText}
+                    addPost={this.props.addPost}
+                />
             </div>
         )
     }

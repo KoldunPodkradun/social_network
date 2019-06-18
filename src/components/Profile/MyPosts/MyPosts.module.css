@@ -19,8 +19,9 @@ textarea{
 .btn{
     border: 1.5px solid #000000;
     background-color: #eee;
-    line-height: 30px;
+    line-height: 52px;
     text-align: center;
     text-transform: uppercase;
     color: #000000;
+    cursor: pointer;
 }

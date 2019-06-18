@@ -5,21 +5,31 @@ import Sidebar from './Sidebar/Sidebar'
 import Profile from './Profile/Profile'
 import Dialogs from './Dialogs/Dialogs'
 import News from './News/News'
-import {BrowserRouter, Route} from "react-router-dom";
+import {Route} from "react-router-dom";
 
 class App extends Component {
     render() {
         return (
             <div className="wrapper">
-                <BrowserRouter>
-                    <Header/>
-                    <Sidebar/>
-                    <div className="content">
-                        <Route path="/dialogs" render={() => {return (<Dialogs dialogs={this.props.dialogs} messages={this.props.messages}/>)}}/>
-                        <Route path="/profile" render={() => {return (<Profile posts={this.props.posts}/>)}}/>
-                        <Route path="/news" component={News}/>
-                    </div>
-                </BrowserRouter>
+                <Header/>
+                <Sidebar/>
+                <div className="content">
+                    <Route path="/dialogs" render={() => {
+                        return (<Dialogs
+                            dialogsData={this.props.state.dialogsData}
+                            addMessage={this.props.addMessage}
+                            updateNewMessageText={this.props.updateNewMessageText}
+                        />)
+                    }}/>
+                    <Route path="/profile" render={() => {
+                        return (<Profile
+                            profileData={this.props.state.profileData}
+                            addPost={this.props.addPost}
+                            updateNewPostText={this.props.updateNewPostText}
+                        />)
+                    }}/>
+                    <Route path="/news" component={News}/>
+                </div>
             </div>
         )
     }
