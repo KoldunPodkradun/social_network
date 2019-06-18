@@ -47,3 +47,5 @@ let messages = [
 ];
 
 render(<App posts={posts} dialogs={dialogs} messages={messages}/>, document.getElementById('root'))
+
+// test
