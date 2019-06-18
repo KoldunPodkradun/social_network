@@ -5,34 +5,31 @@ import Sidebar from './Sidebar/Sidebar'
 import Profile from './Profile/Profile'
 import Dialogs from './Dialogs/Dialogs'
 import News from './News/News'
-import {BrowserRouter, Route} from "react-router-dom";
+import {Route} from "react-router-dom";
 
 class App extends Component {
     render() {
         return (
             <div className="wrapper">
-                <BrowserRouter>
-                    <Header/>
-                    <Sidebar/>
-                    <div className="content">
-                        <Route path="/dialogs"
-                               render={() => {
-                                   return (
-                                       <Dialogs
-                                       state={this.props.state.dialogsData}/>
-                                   )
-                               }}/>
-                        <Route path="/profile"
-                               render={() => {
-                                   return (
-                                       <Profile
-                                       state={this.props.state.profileData}
-                                       addPost={this.props.addPost}/>
-                                   )
-                               }}/>
-                        <Route path="/news" component={News}/>
-                    </div>
-                </BrowserRouter>
+                <Header/>
+                <Sidebar/>
+                <div className="content">
+                    <Route path="/dialogs" render={() => {
+                        return (<Dialogs
+                            dialogsData={this.props.state.dialogsData}
+                            addMessage={this.props.addMessage}
+                            updateNewMessageText={this.props.updateNewMessageText}
+                        />)
+                    }}/>
+                    <Route path="/profile" render={() => {
+                        return (<Profile
+                            profileData={this.props.state.profileData}
+                            addPost={this.props.addPost}
+                            updateNewPostText={this.props.updateNewPostText}
+                        />)
+                    }}/>
+                    <Route path="/news" component={News}/>
+                </div>
             </div>
         )
     }

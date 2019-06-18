@@ -1,35 +1,25 @@
+let rerenderEntireTree = () =>{
+    console.log('True');
+}
+
 let state = {
     profileData: {
         posts: [
             {
-                text: 'First message',
-                likes: '1'
-            },
-            {
-                text: 'Second message',
-                likes: '2'
-            },
-            {
-                text: 'Third message',
-                likes: '3'
-            },
-            {
-                text: 'Fourth message',
-                likes: '4'
+                text: 'Test',
+                likes: 'Test'
             }
-        ]
+        ],
+        newPostText: ''
     },
     dialogsData: {
         messages: [
             {
-                text: 'text 1',
-                likes: '1'
-            },
-            {
-                text: 'text 2',
-                likes: '2'
+                text: 'test',
+                likes: '0'
             }
         ],
+        newMessageText: '',
         dialogs: [
             {
                 id: 1,
@@ -45,14 +35,55 @@ let state = {
             }
         ]
     }
-}
+};
 
-export let addPost = (postMessage) => {
+
+// Паттерн наблюдатель
+export const subscribe = (observer) => {
+    rerenderEntireTree = observer;
+};
+
+// Update new post text function
+// Обновление поля поста
+export const updateNewPostText = (newText) => {
+    state.profileData.newPostText = newText;
+    rerenderEntireTree();
+};
+
+// Add post function
+// Добавить новый пост
+export const addPost = () => {
     let newPost = {
-        text: postMessage,
+        text: state.profileData.newPostText,
         likes: 0
     };
+
     state.profileData.posts.push(newPost);
+    state.profileData.newPostText = '';
+    rerenderEntireTree();
+};
+
+
+
+
+// Update new message text function
+// Обновление поля сообщения
+export const updateNewMessageText = (newMessage) => {
+    state.dialogsData.newMessageText = newMessage;
+    rerenderEntireTree();
+};
+
+// Add message function
+// Добавить новое сообщение
+export const addMessage = () => {
+    let newMessage = {
+        text: state.dialogsData.newMessageText,
+        likes: 0
+    };
+
+    state.dialogsData.messages.push(newMessage);
+    state.dialogsData.newMessageText = '';
+    rerenderEntireTree();
 };
 
 export default state;

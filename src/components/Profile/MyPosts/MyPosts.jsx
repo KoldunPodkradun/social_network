@@ -10,15 +10,18 @@ class MyPosts extends Component {
         let newPostElement = React.createRef();
 
         let addPost = () => {
-            debugger;
+            this.props.addPost();
+        };
+
+        let onPostChange = () => {
             let text = newPostElement.current.value;
-            this.props.addPost(text);
+            this.props.updateNewPostText(text);
         };
 
         return (
             <div className={Classes.my_posts}>
                 <div className={Classes.add}>
-                    <textarea ref={newPostElement}></textarea>
+                    <textarea onChange={onPostChange} ref={newPostElement} value={this.props.newPostText}/>
                     <div className={Classes.btn} onClick={addPost}>Add</div>
                 </div>
                 {postElement}
