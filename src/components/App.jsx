@@ -15,19 +15,10 @@ class App extends Component {
                 <Sidebar/>
                 <div className="content">
                     <Route path="/dialogs" render={() => {
-                        return (
-                            <Dialogs
-                            dialogsData={this.props.state.dialogsData}
-                            addMessage={this.props.addMessage}
-                            updateNewMessageText={this.props.updateNewMessageText}
-                        />)
+                        return (<Dialogs dialogsData={this.props.state.dialogsData} dispatch={this.props.dispatch}/>)
                     }}/>
                     <Route path="/profile" render={() => {
-                        return (<Profile
-                            profileData={this.props.state.profileData}
-                            addPost={this.props.addPost}
-                            updateNewPostText={this.props.updateNewPostText}
-                        />)
+                        return (<Profile profileData={this.props.state.profileData} dispatch={this.props.dispatch}/>)
                     }}/>
                     <Route path="/news" component={News}/>
                 </div>
