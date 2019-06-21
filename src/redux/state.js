@@ -53,7 +53,7 @@ let store = {
                 text: this._state.profileData.newPostText,
                 likes: 0
             };
-            this._state.profileData.posts.push(newPost);
+            this._state.profileData.posts.unshift(newPost);
             this._state.profileData.newPostText = '';
             this._collSubscriber();
         } else if (action.type === UPDATE_NEW_POST_TEXT) {
