@@ -7,19 +7,23 @@
     display: grid;
     grid-template-columns: 10fr 2fr;
     grid-gap: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 textarea{
+    height: 35px;
+    line-height: 35px;
     border: 1.5px solid #000000;
     resize: none;
     padding: 10px;
 }
 
 .btn{
+    height: 35px;
+    line-height: 35px;
+    padding: 10px;
     border: 1.5px solid #000000;
     background-color: #eee;
-    line-height: 52px;
     text-align: center;
     text-transform: uppercase;
     color: #000000;
