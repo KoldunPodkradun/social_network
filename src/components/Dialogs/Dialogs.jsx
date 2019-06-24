@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import DialogItem from './DialogItem/DialogItem'
 import Message from './Message/Message'
 import Classes from './Dialogs.module.css'
-import {addMessageActionCreator, onMessageChangeCreator} from "../../redux/state";
+import {addMessageActionCreator, onMessageChangeCreator} from "../../redux/dialogsReducer";
 
 class Dialogs extends Component {
     render() {

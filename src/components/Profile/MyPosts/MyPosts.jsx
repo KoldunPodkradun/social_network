@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Classes from './MyPosts.module.css'
 import Post from './Post/Post'
-import {addPostActionCreator, onPostChangeCreator} from "../../../redux/state";
+import {addPostActionCreator, onPostChangeCreator} from "../../../redux/profileReducer";
 
 class MyPosts extends Component {
     render() {
