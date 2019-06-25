@@ -1,12 +1,10 @@
-import React, {Component} from 'react'
-import Classes from './Message.module.css'
+import React from 'react';
+import Classes from './Message.module.css';
 
-class Message extends Component {
-    render() {
-        return (
-            <div className={Classes.message}>{this.props.text}</div>
-        )
-    }
-}
+let Message = (props) => {
+    return (
+        <div className={Classes.message}>{props.text}</div>
+    )
+};
 
-export default Message
+export default Message;
