@@ -1,35 +1,30 @@
-import React, {Component} from 'react'
-import Classes from './MyPosts.module.css'
-import Post from './Post/Post'
+import React from 'react';
+import Classes from './MyPosts.module.css';
+import Post from './Post/Post';
 import {addPostActionCreator, onPostChangeCreator} from "../../../redux/profileReducer";
 
-class MyPosts extends Component {
-    render() {
+let MyPosts = (props) => {
+    let postElement = props.posts.map((post) => <Post text={post.text} likes={post.likes}/>);
+    let newPostElement = React.createRef();
 
-        let postElement = this.props.posts.map((post) => <Post text={post.text} likes={post.likes}/>);
+    let addPost = () => {
+        props.dispatch(addPostActionCreator());
+    };
 
-        let newPostElement = React.createRef();
+    let onPostChange = () => {
+        let text = newPostElement.current.value;
+        props.dispatch(onPostChangeCreator(text));
+    };
 
-
-        let addPost = () => {
-            this.props.dispatch(addPostActionCreator());
-        };
-
-        let onPostChange = () => {
-            let text = newPostElement.current.value;
-            this.props.dispatch(onPostChangeCreator(text));
-        };
-
-        return (
-            <div className={Classes.my_posts}>
-                <div className={Classes.add}>
-                    <textarea onChange={onPostChange} ref={newPostElement} value={this.props.newPostText}/>
-                    <div className={Classes.btn} onClick={addPost}>Add</div>
-                </div>
-                {postElement}
+    return (
+        <div className={Classes.my_posts}>
+            <div className={Classes.add}>
+                <textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText}/>
+                <div className={Classes.btn} onClick={addPost}>Add</div>
             </div>
-        )
-    }
+            {postElement}
+        </div>
+    )
 }
 
-export default MyPosts
+export default MyPosts;

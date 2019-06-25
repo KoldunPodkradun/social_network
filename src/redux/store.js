@@ -54,7 +54,7 @@ let store = {
     dispatch(action) {
         this._state.profileData = profileReducer(this._state.profileData, action);
         this._state.dialogsData = dialogsReducer(this._state.dialogsData, action);
-        this._collSubscriber(this.state);
+        this._collSubscriber(this.store);
     }
 };
 
