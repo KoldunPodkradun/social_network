@@ -5,8 +5,8 @@ import Classes from './Dialogs.module.css';
 
 const Dialogs = (props) => {
     let state = props.dialogsData;
-    let dialogElement = state.dialogs.map((d) => <DialogItem id={d.id} name={d.userName}/>);
-    let messageElement = state.messages.map((m) => <Message text={m.text} likes={m.likes}/>);
+    let dialogElement = state.dialogs.map((d) => <DialogItem key={d.id} id={d.id} name={d.userName}/>);
+    let messageElement = state.messages.map((m) => <Message key={m.id} id={m.id} text={m.text} likes={m.likes}/>);
 
 
     let addMessage = () => {

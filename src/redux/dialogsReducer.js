@@ -4,6 +4,7 @@ const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-POST-TEXT';
 let initialState = {
     messages: [
         {
+            id: 'message_1',
             text: 'test',
             likes: 1
         }
@@ -11,15 +12,15 @@ let initialState = {
     newMessageText: '',
     dialogs: [
         {
-            id: 1,
+            id: 'user_1',
             userName: 'User 1'
         },
         {
-            id: 2,
+            id: 'user_2',
             userName: 'User 2'
         },
         {
-            id: 3,
+            id: 'user_3',
             userName: 'User 3'
         }
     ]
@@ -27,17 +28,24 @@ let initialState = {
 
 const dialogsReducer = (state = initialState, action) => {
     switch (action.type) {
+        case UPDATE_NEW_MESSAGE_TEXT: {
+            return {
+                ...state,
+                newMessageText: action.updateMessageText
+            };
+        }
         case ADD_MESSAGE:
+            let newMessageText = state.newMessageText;
             let newMessage = {
-                text: state.newMessageText,
+                id: 'message_2',
+                text: newMessageText,
                 likes: 0
             };
-            state.messages.push(newMessage);
-            state.newMessageText = '';
-            return state;
-        case UPDATE_NEW_MESSAGE_TEXT:
-            state.newMessageText = action.updateMessageText;
-            return state;
+            return {
+                ...state,
+                newMessageText: '',
+                messages: [...state.messages, newMessage]
+            };
         default:
             return state;
     }

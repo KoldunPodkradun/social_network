@@ -28,6 +28,7 @@ a {
 .content{
     border: 1.5px solid #000;
     padding: 15px;
+    color: #000;
 }
 
 /*несколько классов в React*/
