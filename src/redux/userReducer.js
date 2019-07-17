@@ -3,31 +3,31 @@ const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
 
 let initialState = {
-    users: [
-        {
-            id: 'user_id_1',
-            avatar: "https://cs8.pikabu.ru/post_img/big/2016/07/04/10/146764992311896341.jpg",
-            followed: false,
-            fullName: 'fullName_1',
-            status: 'status_1',
-            location: {
-                city: 'city_1',
-                country: 'town_1'
-            }
-        },
-        {
-            id: 'user_id_2',
-            avatar: "https://cs8.pikabu.ru/post_img/big/2016/07/04/10/146764992311896341.jpg",
-            followed: true,
-            fullName: 'fullName_2',
-            status: 'status_2',
-            location: {
-                city: 'city_2',
-                country: 'town_2'
-            }
-        }
-    ],
-    newPostText: ''
+    users: []
+    // users: [
+    //     {
+    //         id: 'user_id_1',
+    //         avatar: "https://cs8.pikabu.ru/post_img/big/2016/07/04/10/146764992311896341.jpg",
+    //         followed: false,
+    //         fullName: 'fullName_1',
+    //         status: 'status_1',
+    //         location: {
+    //             city: 'city_1',
+    //             country: 'town_1'
+    //         }
+    //     },
+    //     {
+    //         id: 'user_id_2',
+    //         avatar: "https://cs8.pikabu.ru/post_img/big/2016/07/04/10/146764992311896341.jpg",
+    //         followed: true,
+    //         fullName: 'fullName_2',
+    //         status: 'status_2',
+    //         location: {
+    //             city: 'city_2',
+    //             country: 'town_2'
+    //         }
+    //     }
+    // ]
 };
 
 const usersReducer = (state = initialState, action) => {

@@ -1,8 +1,15 @@
 .avatar {
+    display: block;
     width: 110px;
     height: 110px;
     margin-bottom: 5px;
     border: 1.5px solid #000000;
+}
+
+.name{
+    text-transform: uppercase;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .follow,
@@ -18,20 +25,15 @@
     background-color: #ff9e9e;
 }
 
-.users_item {
+.user {
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-.users_item:last-child{
+.user:last-child{
     margin-bottom: 0;
 }
 
-.users_item_head {
-    flex-grow: 1;
-}
-
-.users_item_body {
-    display: flex;
-    flex-grow: 100;
+.item_left{
+    margin-right: 10px;
 }
