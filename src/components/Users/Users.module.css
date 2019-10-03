@@ -37,3 +37,23 @@
 .item_left{
     margin-right: 10px;
 }
+
+.pagination {
+    display: block;
+    text-align: center;
+}
+
+.pagination li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.selected {
+    font-weight: bold;
+}
+
+.item_right {
+    display: block;
+}
