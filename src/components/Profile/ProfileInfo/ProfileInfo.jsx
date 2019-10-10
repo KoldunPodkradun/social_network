@@ -9,9 +9,9 @@ let ProfileInfo = (props) => {
 
     return (
         <div className={Classes.profile_info}>
-            <img className={Classes.content_bg} src={props.profile.photos.large} />
-
-            <div className={Classes.personal_data}></div>
+            <div>
+                <img className={Classes.content_photo} src={props.profile.photos.large} />
+            </div>
         </div>
     )
 };
