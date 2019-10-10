@@ -4,11 +4,14 @@ import dialogsReducer from "./dialogsReducer";
 import usersReducer from "./userReducer";
 
 let reducers = combineReducers({
+    profilePage: profileReducer,
     profileData: profileReducer,
     dialogsData: dialogsReducer,
     usersPage: usersReducer
 });
 
 let store = createStore(reducers);
+
+window.store = store;
 
 export default store;

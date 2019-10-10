@@ -1,10 +1,16 @@
 import React from 'react';
 import Classes from './ProfileInfo.module.css';
+import Preloader from "../../Common/Preloader";
 
-let ProfileInfo = () => {
+let ProfileInfo = (props) => {
+    if (!props.profile){
+        return <Preloader/>
+    }
+
     return (
         <div className={Classes.profile_info}>
-            <img className={Classes.content_bg} src="https://image4.owler.com/logo/disgusting-men_owler_20160229_212321_original.jpg" alt="#"/>
+            <img className={Classes.content_bg} src={props.profile.photos.large} />
+
             <div className={Classes.personal_data}></div>
         </div>
     )
