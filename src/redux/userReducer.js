@@ -7,7 +7,6 @@ const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING';
 
 let initialState = {
     // users из API локальные
-
     users: [],
     pageSize: 10,
     totalUsersCount: 0,
