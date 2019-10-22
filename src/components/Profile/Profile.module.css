@@ -1,7 +1,0 @@
-.content {
-    display: grid;
-    grid-template-areas: "profile_info" "my_posts";
-    grid-template-columns: 1fr;
-    grid-template-rows: 2fr 2fr;
-    grid-gap: 10px;
-}

@@ -9,7 +9,8 @@ let reducers = combineReducers({
     profileData: profileReducer,
     dialogsData: dialogsReducer,
     usersPage: usersReducer,
-    auth: authReducer
+    auth: authReducer,
+
 });
 
 let store = createStore(reducers);

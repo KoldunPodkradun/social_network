@@ -1,6 +1,7 @@
 .profile_info {
     display: flex;
     align-items: flex-start;
+    margin-bottom: 25px;
 }
 
 .content_photo {
