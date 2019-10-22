@@ -66,31 +66,6 @@ let mapStateToProps = (state) => {
     }
 };
 
-// передает callback функции Action Creator которые призентационная компонента может вызывать
-
-// let mapDispatchToProps = (dispatch) => {
-//     return {
-//         follow: (userId) => {
-//             dispatch(followActionCreator(userId));
-//         },
-//         unFollow: (userId) => {
-//             dispatch(unFollowActionCreator(userId));
-//         },
-//         setUsers: (users) => {
-//             dispatch(setUsersActionCreator(users));
-//         },
-//         setCurrentPage: (pageNumber) => {
-//             dispatch(setCurrentPageActionCreator(pageNumber));
-//         },
-//         setTotalUsersCount: (totalCount) => {
-//             dispatch(setTotalUsersCountActionCreator(totalCount));
-//         },
-//         toggleIsFetching: (isFetching) => {
-//             dispatch(toggleIsFetchingActionCreator(isFetching));
-//         }
-//     }
-// };
-
 export default connect(mapStateToProps, {
     follow,
     unFollow,

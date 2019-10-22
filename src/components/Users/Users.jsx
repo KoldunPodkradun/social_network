@@ -2,7 +2,6 @@ import React from 'react';
 import Style from "./Users.module.css";
 import avatarDefault from "../../assets/img/logo.jpg";
 import {NavLink} from "react-router-dom";
-import * as axios from "axios";
 import {usersAPI} from "../../api/api";
 
 let Users = (props) => {
@@ -49,8 +48,8 @@ let Users = (props) => {
                                       disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
                                 props.toggleFollowingProgress(true, u.id);
                                 usersAPI.follow(u.id)
-                                    .then(response => {
-                                        if (response.data.resultCode == 0) {
+                                    .then(data => {
+                                        if (data.resultCode == 0) {
                                             props.follow(u.id);
                                         }
                                         props.toggleFollowingProgress(false, u.id);
