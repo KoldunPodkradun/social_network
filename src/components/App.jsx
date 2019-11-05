@@ -7,6 +7,7 @@ import DialogsContainer from "./Dialogs/DialogsContainer";
 import UsersContainer from "./Users/UsersContainer";
 import ProfileContainer from "./Profile/ProfileContainer";
 import News from './News/News';
+import Login from "./Login/Login";
 
 const App = (props) => {
     return (
@@ -14,9 +15,10 @@ const App = (props) => {
             <HeaderContainer/>
             <Sidebar/>
             <div className="content">
-                <Route path="/dialogs" render={() => (<DialogsContainer store={props.store}/>)}/>
-                <Route path="/profile/:userId?" render={() => (<ProfileContainer store={props.store}/>)}/>
-                <Route path="/users" render={() => (<UsersContainer/>)}/>
+                <Route path="/dialogs" render={() => <DialogsContainer store={props.store}/>}/>
+                <Route path="/profile/:userId?" render={() => <ProfileContainer store={props.store}/>}/>
+                <Route path="/users" render={() => <UsersContainer/>}/>
+                <Route path="/login" render={() => <Login/>}/>
                 <Route path="/news" component={News}/>
             </div>
         </div>

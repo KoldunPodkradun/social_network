@@ -1,38 +1,25 @@
 import React from 'react';
 import {connect} from "react-redux";
 import {
-    follow,
-    setUsers,
-    unFollow,
+    followSuccess,
+    unFollowSuccess,
     setCurrentPage,
-    setTotalUsersCount,
-    toggleIsFetching,
-    toggleFollowingProgress
+    toggleFollowingProgress,
+    getUsers,
+    follow,
+    unFollow
 } from "../../redux/userReducer";
 import Users from "./Users";
 import Preloader from "../Common/Preloader";
-import {usersAPI} from "../../api/api";
 
 
 class UsersContainer extends React.Component {
     componentDidMount() {
-        this.props.toggleIsFetching(true);
-        usersAPI.getUsers(this.props.currentPage, this.props.pageSize)
-            .then(data => {
-                this.props.toggleIsFetching(false);
-                this.props.setUsers(data.items);
-                this.props.setTotalUsersCount(data.totalCount)
-            });
+        this.props.getUsers(this.props.pageSize, this.props.currentPage);
     };
 
     onPageChanged = (pageNumber) => {
-        this.props.toggleIsFetching(true);
-        this.props.setCurrentPage(pageNumber);
-        usersAPI.getUsers(pageNumber, this.props.pageSize)
-            .then(data => {
-                this.props.toggleIsFetching(false);
-                this.props.setUsers(data.items)
-            });
+        this.props.getUsers(pageNumber, this.props.pageSize);
     };
 
     render() {
@@ -46,7 +33,6 @@ class UsersContainer extends React.Component {
                    name={this.props.name}
                    follow={this.props.follow}
                    unFollow={this.props.unFollow}
-                   toggleFollowingProgress={this.props.toggleFollowingProgress}
                    followingInProgress={this.props.followingInProgress}
 
             />
@@ -67,11 +53,11 @@ let mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, {
-    follow,
-    unFollow,
-    setUsers,
+    followSuccess,
+    unFollowSuccess,
     setCurrentPage,
-    setTotalUsersCount,
-    toggleIsFetching,
-    toggleFollowingProgress
+    toggleFollowingProgress,
+    getUsers,
+    follow,
+    unFollow
 })(UsersContainer);
