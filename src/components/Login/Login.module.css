@@ -1,0 +1,26 @@
+.title {
+    margin-bottom: 20px;
+}
+
+.inputWrapp {
+    margin-bottom: 20px;
+}
+
+.inputWrapp:last-child {
+    margin-bottom: 0;
+}
+
+.loginForm input,
+.loginForm button{
+    display: block;
+    padding: 10px;
+    border: 1.5px solid #000;
+}
+
+.loginForm  button {
+    width: 130px;
+    height: 35px;
+    padding: 0;
+    background-color: #fff;
+    color: #000000;
+}
