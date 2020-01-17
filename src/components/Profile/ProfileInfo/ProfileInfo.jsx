@@ -1,5 +1,5 @@
 import React from 'react';
-import Classes from './ProfileInfo.module.css';
+import styles from './ProfileInfo.module.css';
 import Preloader from "../../Common/Preloader";
 import avatarDefault from "../../../assets/img/logo.jpg";
 import ProfileStatus from "./ProfileStatus";
@@ -14,10 +14,10 @@ let ProfileInfo = (props) => {
     let lookingForAJob = props.profile.lookingForAJob;
 
     return (
-        <div className={Classes.profile_info}>
-            <img className={Classes.content_photo}
+        <div className={styles.profile_info}>
+            <img className={styles.content_photo}
                  src={photosLarge !== null ? photosLarge : avatarDefault}/>
-            <div className={Classes.content_info}>
+            <div className={styles.content_info}>
                 <div><span>Name:</span> {props.profile.fullName}</div>
                 <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
                 {aboutMe !== null ? <div><span>About Me:</span> {aboutMe}</div> : ''}

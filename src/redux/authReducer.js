@@ -1,13 +1,11 @@
 import {authAPI} from "../api/api";
 
-
 const SET_USERS_DATA = 'SET_USERS_DATA';
 
 let initialState = {
     usersId: null,
-    login: null,
     email: null,
-    isFetching: true,
+    login: null,
     isAuth: false
 
 };
@@ -17,8 +15,7 @@ const authReducer = (state = initialState, action) => {
         case SET_USERS_DATA:
             return {
                 ...state,
-                ...action.data,
-                isAuth: true
+                ...action.payload
             };
         default:
             return state;
@@ -27,7 +24,7 @@ const authReducer = (state = initialState, action) => {
 
 // Action Creator
 
-export const setAuthUserData = (usersId, login, email) => ({type: SET_USERS_DATA, data: {usersId, login, email}});
+export const setAuthUserData = (usersId, email, login, isAuth) => ({type: SET_USERS_DATA, payload: {usersId, email, login, isAuth}});
 
 // Thunk
 
@@ -36,7 +33,26 @@ export const getAuthUserData = () => (dispatch) => {
         .then(response => {
             if (response.data.resultCode === 0) {
                 let {id, login, email} = response.data.data;
-                dispatch(setAuthUserData(id, login, email));
+                dispatch(setAuthUserData(id, email, login, true));
+            }
+        });
+};
+
+export const login = (email, password, rememberMe) => (dispatch) => {
+    authAPI.login(email, password, rememberMe)
+        .then(response => {
+            if (response.data.resultCode === 0) {
+                dispatch(getAuthUserData());
+            }
+        });
+};
+
+
+export const logout = () => (dispatch) => {
+    authAPI.logout()
+        .then(response => {
+            if (response.data.resultCode === 0) {
+                dispatch(setAuthUserData(null, null, null, false));
             }
         });
 };
