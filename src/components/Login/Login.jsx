@@ -11,15 +11,25 @@ const LoginForm = (props) => {
 
     return <div>
         <form onSubmit={props.handleSubmit} className={styles.loginForm}>
+
             <div className={styles.inputWrapp}>
-                <Field placeholder={'email'} name={'email'} component={Input} validate={[required]}/>
+                <Field placeholder={'email'} name={'email'}
+                       component={Input}
+                       validate={[required]}
+                />
             </div>
             <div className={styles.inputWrapp}>
-                <Field placeholder={'Password'} type={'password'} name={'password'} component={Input} validate={[required]}/>
+                <Field placeholder={'Password'} name={'password'} type={'password'}
+                       component={Input}
+                       validate={[required]}
+                />
             </div>
             <div className={styles.inputWrapp}>
-                <Field component={Input}  type={'checkbox'} name={'rememberMe'}/>
+                <Field type={'checkbox'} name={'rememberMe'}
+                       component={Input}
+                />
             </div>
+            {props.error && <div className={styles.error}>{props.error}</div>}
             <div className={styles.inputWrapp}>
                 <button>Submit</button>
             </div>
@@ -32,10 +42,10 @@ const LoginReduxForm = reduxForm({form: 'login'})(LoginForm);
 
 const Login = (props) => {
     const onSubmit = (formData) => {
-      props.login(formData.email, formData.password, formData.rememberMe);
+        props.login(formData.email, formData.password, formData.rememberMe);
     };
 
-    if(props.isAuth) {
+    if (props.isAuth) {
         return <Redirect to={'/profile'}/>
     }
 
