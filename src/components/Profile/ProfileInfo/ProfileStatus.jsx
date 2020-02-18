@@ -13,7 +13,6 @@ const ProfileStatus = (props) => {
         setEditMode(true);
     };
 
-
     const deActivateEditMode = () => {
         setEditMode(false);
         props.updateStatus(status);

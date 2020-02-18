@@ -1,61 +1,24 @@
+import {applyMiddleware, combineReducers, createStore} from "redux";
+import thunkMiddleware from "redux-thunk";
+import {reducer as formReducer} from 'redux-form';
 import profileReducer from "./profileReducer";
 import dialogsReducer from "./dialogsReducer";
+import usersReducer from "./userReducer";
+import authReducer from "./authReducer";
+import appReducer from "./appReducer";
 
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+let reducers = combineReducers({
+    profilePage: profileReducer,
+    profileData: profileReducer,
+    dialogsData: dialogsReducer,
+    usersPage: usersReducer,
+    auth: authReducer,
+    app: appReducer,
+    form: formReducer
+});
 
-const ADD_MESSAGE = 'ADD-MESSAGE';
-const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-POST-TEXT';
+let store = createStore(reducers, applyMiddleware(thunkMiddleware));
 
-let store = {
-    _state: {
-        profileData: {
-            posts: [
-                {
-                    text: 'Test',
-                    likes: 'Test'
-                }
-            ],
-            newPostText: ''
-        },
-        dialogsData: {
-            messages: [
-                {
-                    text: 'test',
-                    likes: '0'
-                }
-            ],
-            newMessageText: '',
-            dialogs: [
-                {
-                    id: 1,
-                    userName: 'User 1'
-                },
-                {
-                    id: 2,
-                    userName: 'User 2'
-                },
-                {
-                    id: 3,
-                    userName: 'User 3'
-                }
-            ]
-        }
-    },
-    getState() {
-        return this._state;
-    },
-    _collSubscriber() {
-        console.log('State change');
-    },
-    subscribe(observer) {
-        this._collSubscriber = observer;
-    },
-    dispatch(action) {
-        this._state.profileData = profileReducer(this._state.profileData, action);
-        this._state.dialogsData = dialogsReducer(this._state.dialogsData, action);
-        this._collSubscriber(this.store);
-    }
-};
+window.store = store;
 
 export default store;
