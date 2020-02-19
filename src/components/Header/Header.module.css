@@ -8,9 +8,14 @@
     max-width: 100px;
 }
 
-.login {
+.login,
+.logout{
     font-size: 14px;
     text-transform: uppercase;
     color: #000000;
     float: right;
+}
+
+.logout {
+    padding-left: 10px;
 }

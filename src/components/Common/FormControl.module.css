@@ -1,0 +1,22 @@
+.inputWrapp {
+    flex: 5;
+}
+
+.inputWrapp span {
+    display: block;
+    color: red;
+    margin-top: 5px;
+}
+
+.inputWrapp.error textarea,
+.inputWrapp.error input {
+    border: 1.5px solid red;
+}
+
+.inputWrapp {
+    margin-bottom: 10px;
+}
+
+.inputWrapp:last-child {
+    margin-bottom: 0;
+}

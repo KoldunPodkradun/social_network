@@ -1,10 +1,10 @@
 import React from 'react';
-import Classes from './News.module.css';
+import styles from './News.module.css';
 
 let News = () => {
     return (
         <div>
-            <div className={Classes.item}>News</div>
+            <div className={styles.item}>News</div>
         </div>
     )
 };

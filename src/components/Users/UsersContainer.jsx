@@ -1,30 +1,36 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {follow, setUsers, unFollow, setCurrentPage, setTotalUsersCount, toggleIsFetching} from "../../redux/userReducer";
-import * as axios from "axios";
+import {
+    followSuccess,
+    unFollowSuccess,
+    setCurrentPage,
+    toggleFollowingProgress,
+    requestUsers,
+    follow,
+    unFollow
+} from "../../redux/userReducer";
 import Users from "./Users";
 import Preloader from "../Common/Preloader";
+import {compose} from "redux";
+import {
+    getCurrentPage,
+    getFollowingInProgress,
+    getIsFetching,
+    getPageSize,
+    getTotalUsersCount, getUsers
+} from "../../redux/usersSelectors";
 
 
 class UsersContainer extends React.Component {
+
     componentDidMount() {
-        this.props.toggleIsFetching(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`)
-            .then(response => {
-                this.props.toggleIsFetching(false);
-                this.props.setUsers(response.data.items);
-                this.props.setTotalUsersCount(response.data.totalCount)
-            });
+        const {pageSize, currentPage} = this.props;
+        this.props.getUsers(pageSize, currentPage);
     };
 
     onPageChanged = (pageNumber) => {
-        this.props.toggleIsFetching(true);
-        this.props.setCurrentPage(pageNumber);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`)
-            .then(response => {
-                this.props.toggleIsFetching(false);
-                this.props.setUsers(response.data.items)
-            });
+        const {pageSize} = this.props;
+        this.props.getUsers(pageNumber, pageSize);
     };
 
     render() {
@@ -38,46 +44,32 @@ class UsersContainer extends React.Component {
                    name={this.props.name}
                    follow={this.props.follow}
                    unFollow={this.props.unFollow}
+                   followingInProgress={this.props.followingInProgress}
 
             />
         </>
     };
 }
 
-// принимает state целиком
 let mapStateToProps = (state) => {
     return {
-        users: state.usersPage.users,
-        pageSize: state.usersPage.pageSize,
-        totalUsersCount: state.usersPage.totalUsersCount,
-        currentPage: state.usersPage.currentPage,
-        isFetching: state.usersPage.isFetching
+        users: getUsers(state),
+        pageSize: getPageSize(state),
+        totalUsersCount: getTotalUsersCount(state),
+        currentPage: getCurrentPage(state),
+        isFetching: getIsFetching(state),
+        followingInProgress: getFollowingInProgress(state)
     }
 };
 
-// передает callback функции Action Creator которые призентационная компонента может вызывать
-
-// let mapDispatchToProps = (dispatch) => {
-//     return {
-//         follow: (userId) => {
-//             dispatch(followActionCreator(userId));
-//         },
-//         unFollow: (userId) => {
-//             dispatch(unFollowActionCreator(userId));
-//         },
-//         setUsers: (users) => {
-//             dispatch(setUsersActionCreator(users));
-//         },
-//         setCurrentPage: (pageNumber) => {
-//             dispatch(setCurrentPageActionCreator(pageNumber));
-//         },
-//         setTotalUsersCount: (totalCount) => {
-//             dispatch(setTotalUsersCountActionCreator(totalCount));
-//         },
-//         toggleIsFetching: (isFetching) => {
-//             dispatch(toggleIsFetchingActionCreator(isFetching));
-//         }
-//     }
-// };
-
-export default connect(mapStateToProps, {follow, unFollow, setUsers, setCurrentPage, setTotalUsersCount, toggleIsFetching})(UsersContainer);
+export default compose(
+    connect(mapStateToProps, {
+        followSuccess,
+        unFollowSuccess,
+        setCurrentPage,
+        toggleFollowingProgress,
+        getUsers: requestUsers,
+        follow,
+        unFollow
+    })
+)(UsersContainer);

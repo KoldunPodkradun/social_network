@@ -1,0 +1,30 @@
+.title {
+    margin-bottom: 20px;
+}
+
+.loginForm input,
+.loginForm button {
+    display: block;
+    max-width: 200px;
+    width: 200px;
+    padding: 10px;
+    border: 1.5px solid #000;
+}
+
+.loginForm input[type=checkbox] {
+    max-width: none;
+    width: auto;
+}
+
+.loginForm button {
+    width: 130px;
+    height: 35px;
+    padding: 0;
+    background-color: #fff;
+    color: #000000;
+}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+}

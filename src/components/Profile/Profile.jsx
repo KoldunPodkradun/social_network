@@ -1,12 +1,12 @@
 import React from 'react';
-import Classes from './Profile.module.css';
+import styles from './Profile.module.css';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
 const Profile = (props) => {
     return (
-        <div className={Classes.content}>
-            <ProfileInfo profile={props.profile}/>
+        <div className={styles.content}>
+            <ProfileInfo profile={props.profile} status={props.status} updateStatus={props.updateStatus}/>
             <MyPostsContainer store={props.store}/>
         </div>
     )

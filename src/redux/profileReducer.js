@@ -1,6 +1,9 @@
+import {profileAPI, usersAPI} from "../api/api";
+
 const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
+const SET_STATUS = 'SET_STATUS';
+const DELETE_POST = 'DELETE_POST';
 
 let initialState = {
     posts: [
@@ -10,30 +13,30 @@ let initialState = {
             likes: 1
         }
     ],
-    newPostText: '',
-    profile: ''
+    profile: null,
+    status: ''
 };
 
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
-        case UPDATE_NEW_POST_TEXT: {
-            return {
-                ...state,
-                newPostText: action.updatePostText
-            };
-        }
-        case ADD_POST:
-            let newPostText = state.newPostText;
-            let newPost = {
+        case ADD_POST: {
+            let newPosts = {
                 id: 1,
-                text: newPostText,
+                text: action.newPostText,
                 likes: 0
             };
             return {
                 ...state,
-                newPostText: '',
-                posts: [newPost, ...state.posts]
+                posts: [...state.posts, newPosts],
+                newPostsText: ''
             };
+        }
+        case SET_STATUS: {
+            return {
+                ...state,
+                status: action.status
+            };
+        }
         case SET_USER_PROFILE: {
             return {
                 ...state,
@@ -45,8 +48,28 @@ const profileReducer = (state = initialState, action) => {
     }
 };
 
-export const addPostActionCreator = () => {return {type: ADD_POST}};
-export const setUserProfile = (profile) => {return {type: SET_USER_PROFILE, profile}};
-export const onPostChangeCreator = (text) => {return {type: UPDATE_NEW_POST_TEXT, updatePostText: text}};
+export const addPostActionCreator = (newPostText) => ({type: ADD_POST, newPostText});
+export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
+export const setUserStatus = (status) => ({type: SET_STATUS, status});
+export const deletePost = (id) => ({type: DELETE_POST, id});
+
+// Thunk
+
+export const getUserProfile = (userId) => async (dispatch) => {
+    let response = await usersAPI.getProfile(userId);
+    dispatch(setUserProfile(response.data));
+};
+
+export const getUserStatus = (userId) => async (dispatch) => {
+    let response = await profileAPI.getStatus(userId);
+    dispatch(setUserStatus(response.data));
+};
+
+export const updateStatus = (status) => async (dispatch) => {
+    let response = await profileAPI.updateStatus(status)
+    if (response.data.resultCode === 0) {
+        dispatch(setUserStatus(status));
+    }
+};
 
 export default profileReducer;
