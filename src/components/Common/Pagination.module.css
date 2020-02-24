@@ -1,3 +1,10 @@
+.pagination__wrapp {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 .pagination {
     display: block;
     text-align: center;
@@ -12,4 +19,12 @@
 
 .selected {
     font-weight: bold;
+}
+
+.pagination__prev,
+.pagination__next {
+    font-weight: bold;
+    border: 2px solid #000000;
+    padding: 5px;
+    cursor: pointer;
 }

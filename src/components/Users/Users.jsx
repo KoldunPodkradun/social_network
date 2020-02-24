@@ -14,7 +14,7 @@ let Users = ({currentPage, onPageChanged, totalUsersCount, pageSize, followingIn
     return <div>
         <Pagination currentPage={currentPage}
                     onPageChanged={onPageChanged}
-                    totalUsersCount={totalUsersCount}
+                    totalItemsCount={totalUsersCount}
                     pageSize={pageSize}/>
         {
             users.map(u =>
