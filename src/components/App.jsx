@@ -3,15 +3,19 @@ import './App.css';
 import {Route, withRouter} from "react-router-dom";
 import HeaderContainer from "./Header/HeaderContainer";
 import Sidebar from './Sidebar/Sidebar';
-import DialogsContainer from "./Dialogs/DialogsContainer";
-import UsersContainer from "./Users/UsersContainer";
-import ProfileContainer from "./Profile/ProfileContainer";
-import News from './News/News';
-import Login from "./Login/Login";
+
 import {connect} from "react-redux";
 import {compose} from "redux";
 import {initializeApp} from "../redux/appReducer";
 import Preloader from "./Common/Preloader";
+import {withSuspense} from "./hoc/WitchSuspense";
+
+const DialogsContainer = React.lazy(() => import('./Dialogs/DialogsContainer'));
+const ProfileContainer = React.lazy(() => import('./Profile/ProfileContainer'));
+const UsersContainer = React.lazy(() => import('./Users/UsersContainer'));
+const Login = React.lazy(() => import('./Login/Login'));
+const News = React.lazy(() => import('./News/News'));
+
 
 class App extends Component {
     componentDidMount() {
@@ -28,11 +32,11 @@ class App extends Component {
                 <HeaderContainer/>
                 <Sidebar/>
                 <div className="content">
-                    <Route path="/dialogs" render={() => <DialogsContainer/>}/>
-                    <Route path="/profile/:userId?" render={() => <ProfileContainer/>}/>
-                    <Route path="/users" render={() => <UsersContainer/>}/>
-                    <Route path="/login" render={() => <Login/>}/>
-                    <Route path="/news" component={News}/>
+                    <Route path="/dialogs" render={withSuspense(DialogsContainer)}/>
+                    <Route path="/profile/:userId?" render={withSuspense(ProfileContainer)}/>
+                    <Route path="/users" render={withSuspense(UsersContainer)}/>
+                    <Route path="/login" render={withSuspense(Login)}/>
+                    <Route path="/news" render={withSuspense(News)}/>
                 </div>
             </div>
         )
